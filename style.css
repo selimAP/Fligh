@@ -130,7 +130,7 @@ body{
     font-size: 15px;
     font-weight: bold;
     padding: 15px;
-    min-width: 85%;
+    min-width: 65%;
 }
 
 @media (max-width:1521px) {
@@ -147,4 +147,25 @@ body{
     .todo-main{
        padding: 100px 30px;
     }
+}
+
+
+.date-span{
+    min-width: 20%;
+    color: rgb(36, 36, 36);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    border-left: 0.1px solid rgb(201, 201, 201);
+
+}
+
+#datetime{
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    border-left: 0.1px solid rgb(201, 201, 201);
+    padding: 5px;
 }

@@ -1,3 +1,4 @@
+
 let content = document.getElementById('addTask');
 
 document.getElementById('saveTask').onclick = function() {
@@ -5,12 +6,18 @@ document.getElementById('saveTask').onclick = function() {
     if(document.getElementById('addTask').value == ""){
         document.getElementById('add-new-todo').style.border  = 'solid red';
     }else{
+
         document.getElementById('add-new-todo').style.border  = 'none';
-        
+
+        const datetimeValue = document.getElementById('datetime').value;
+
         let addTask = document.getElementById('add-task').innerHTML += 
-        `<div onclick="taskDone()" id="added-todo" class="added-new-todo"><p class="saved-task-text" type="text">${content.value}</p><button id="taskDone" class="added-task-done">✓</button></div>`;
+        `<div id="added-todo" class="added-new-todo"><p class="saved-task-text" type="text">${content.value}</p>
+        <span id="taskDate" class="date-span">${datetimeValue}</span><button onclick="taskDone()" id="taskDone" class="added-task-done">✓</button></div>`;
     
         document.getElementById('addTask').value = '';
+
+
     }
 
 }
