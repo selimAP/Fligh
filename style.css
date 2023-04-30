@@ -101,7 +101,6 @@ body{
     background: rgb(255, 255, 255);
     box-shadow: 0px 0px 20px rgb(0, 0, 0);
     margin: 15px 0px;
-    display: flex;
     align-items: stretch;
 }
 
@@ -130,7 +129,8 @@ body{
     font-size: 15px;
     font-weight: bold;
     padding: 15px;
-    min-width: 65%;
+    min-width: 75%;
+    word-break: break-all;
 }
 
 @media (max-width:1521px) {
@@ -151,16 +151,14 @@ body{
 
 
 .date-span{
-    min-width: 20%;
+    min-width: 10%;
     color: rgb(36, 36, 36);
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: visible;
     border-left: 0.1px solid rgb(201, 201, 201);
-
 }
 
 #datetime{
@@ -168,4 +166,12 @@ body{
     border: none;
     border-left: 0.1px solid rgb(201, 201, 201);
     padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo h2{
+    display: flex;
+    justify-content: center;
+    color: white;
 }
