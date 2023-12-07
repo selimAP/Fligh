@@ -16,6 +16,7 @@ body{
 
 .content{
     display: flex;
+    justify-content: center;
     flex-direction: row;
     width: 100%;
     margin: 0 auto;
@@ -32,12 +33,21 @@ body{
 }
 
 .todo-main {
+    max-width: 689px;
     height: 100vh;
     width: 100%;
     background: var(--primColor);
-    padding: 50px 300px;
+    padding: 100px 0px;
     transition: .3s;
 }
+
+@media (max-width:770px) {
+    .todo-main{
+       padding: 100px 30px;
+    }
+}
+
+
 
 #add-new-todo{
     transition: .05s;
@@ -65,7 +75,7 @@ body{
 .add-task-done{
     min-height: 100%;
     border-radius: 0px 10px 10px 0px;
-    width: 15%;
+    width: 101px;
     border: 0;
     font-size: 20px;
     font-weight: bolder;
@@ -116,7 +126,7 @@ body{
 }
 
 .added-task-done:hover{
-    background: rgb(9, 255, 9);
+    background: rgb(255, 9, 9);
     cursor: pointer;
 }
 
@@ -131,22 +141,6 @@ body{
     padding: 15px;
     min-width: 75%;
     word-break: break-all;
-}
-
-@media (max-width:1521px) {
-    .todo-main{
-       padding: 100px 200px;
-    }
-}
-@media (max-width:1150px) {
-    .todo-main{
-       padding: 100px 100px;
-    }
-}
-@media (max-width:770px) {
-    .todo-main{
-       padding: 100px 30px;
-    }
 }
 
 
@@ -169,8 +163,26 @@ body{
     justify-content: center;
 }
 
+@media (max-width: 457px){
+    #datetime{
+        display: none;
+    }
+    .add-task-done{
+        width: 101px;
+    }
+}
+
 .logo h2{
     display: flex;
     justify-content: center;
     color: white;
 }
+
+.last-deleted{
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.last-deleted h5{
+    color: rgb(209, 209, 209);
+}
+
