@@ -184,5 +184,25 @@ body{
 }
 .last-deleted h5{
     color: rgb(209, 209, 209);
+    display: flex;
+    align-items: center;
+    user-select: none;
 }
 
+.last-deleted h5:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.last-deleted ul{
+    display: none;
+}
+
+#openLastDeletedSpan{
+    display: none;
+}
+
+#openCloseLastDeletedDiv{
+    display: flex;
+    padding-right: 5px;
+}

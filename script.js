@@ -65,3 +65,26 @@ function deleteTaskPermnt(event) {
   const deletePermBtn = event.target.parentElement;
   deletePermBtn.remove();
 }
+
+
+let closeLastDeletedDiv = document.getElementById('openLastDeletedSpan');
+let closeLastDeletedSpan = document.getElementById('closeLastDeletedSpan');
+let headerLastDeleted = document.getElementById('headerLastDeleted');
+
+let isExpanded = true;
+
+headerLastDeleted.addEventListener('click', function(){
+  if (!isExpanded) {
+    closeLastDeletedDiv.style.display = 'none';
+    closeLastDeletedSpan.style.display = 'flex';
+    deletedTaskContainer.style.display = 'none';
+  isExpanded = true;
+  }
+  else{
+    closeLastDeletedDiv.style.display = 'flex';
+    closeLastDeletedSpan.style.display = 'none';
+    deletedTaskContainer.style.display = 'flex';
+
+    isExpanded = false;
+  }
+});
