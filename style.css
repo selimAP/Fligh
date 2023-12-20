@@ -206,3 +206,7 @@ body{
     display: flex;
     padding-right: 5px;
 }
+
+#deleted-task{
+    flex-direction: column;
+}
