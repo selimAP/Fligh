@@ -16,7 +16,8 @@ content.addEventListener("keypress", function(event) {
         const addTaskInput = document.getElementById('addTask');
         const addNewTodo = document.getElementById('add-new-todo');
         const datetimeValue = document.getElementById('datetime').value;
-    
+
+        
     if (addTaskInput.value === '') {
         addNewTodo.style.border = 'solid red';
     }else{
@@ -38,9 +39,12 @@ content.addEventListener("keypress", function(event) {
         const savedTaskText = document.querySelector('.saved-task-text');
 
         if (taskDate && taskDate.innerHTML === '00:00') {
-            taskDate.style.display = 'none';
-            savedTaskText.style.minWidth = '85%';
-        }
+          taskDate.style.display = 'none';
+          savedTaskText.style.minWidth = '85%';
+      } else {
+          document.getElementById("datetime").value = '';
+      }
+      
   }
 });
 
